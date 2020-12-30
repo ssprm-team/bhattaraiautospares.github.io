@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ours Work</title>
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../image/love.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+    	.work .content
+		{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+		}
+		.work .content .workBx
+		{
+			width: 50%;
+			padding: 20px;
+
+		}
+		.work .content .workBx img
+		{
+			max-width: 100%;
+
+		}
+		.work .heading .btn
+		{
+			position: relative;
+			background: #2196f3;
+			display: inline-block;
+			color: #fff;
+			margin-top: 20px;
+			padding: 10px 30px;
+			font-size: 18px;
+			text-transform: uppercase;
+			text-decoration: none;
+			letter-spacing: 2px;
+			font-weight: 500;
+		}
+    </style>
+
+</head>
+<body>	
+	<header>
+		<a href="index.html" class="logo">LoveMe</a>
+		<div class="toggle" onclick="toggleMenu();"></div>
+		<ul class="menu">
+			<li><a class="" href="index.html"  onclick="toggleMenu();">Home</a></li>
+			<li><a href="work.html"  onclick="toggleMenu();">Our Works</a></li>
+			<li><a href="providers.html" onclick="toggleMenu();">Providers</a></li>
+			<li><a href="#work" onclick="toggleMenu();">Our Stories</a></li>
+			<li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+			<li><a href="patreon.html" onclick="toggleMenu();">PATREON</a></li>
+
+		</ul>
+	</header>
+
+	<section class="work" id="work" style="background: #111;">
+		<div class="heading">
+			<h2 style="color: #fff;">Our Best Stories</h2>
+			<p style="color: #fff;">Here are some clips of our works and stories.</p>
+		</div>
+		<div class="content">
+			<div class="workBx">
+				<img src="../image/elder people.jpg">
+			</div>
+			<div class="workBx">
+				<img src="../image/elder people2.jpg">
+			</div>
+			<div class="workBx">
+				<img src="../image/many child.jpg">
+			</div>
+			<div class="workBx">
+				<img src="../image/edu child.jpg">
+			</div>
+			<div class="workBx">
+				<img src="../image/edu child.jpg">
+			</div>
+			<div class="workBx">
+				<img src="../image/many child.jpg">
+			</div>
+		</div>
+	</section>
+
+
+	<section class="contact" id="contact">
+		<div class="heading white">
+			<h2>Contact Us</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+		<div class="content">
+			<div class="contactInfo">
+				<h3>Contact Info</h3>
+				<div class="contactInfoBox">
+					<div class="box">
+						<div class="icon">
+							<i class="fa fa-map-marker"></i>
+						</div>
+						<div class="text">
+							<h3>Address</h3>
+							<p>Bishalnagar, Handigaon,<br>Kathmandu, Nepal, <br>44600</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon">
+							<i class="fa fa-phone"></i>
+						</div>
+						<div class="text">
+							<h3>Phone</h3>
+							<p>977 + 9861002356</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon">
+							<i class="fa fa-envelope-o"></i>
+						</div>
+						<div class="text">
+							<h3>Email</h3>
+							<p>mailloveme@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="formBx">
+				<form>
+					<h3>Message Me</h3>
+					<input type="text" name="" placeholder="Full Name">
+					<input type="Email" name="" placeholder="Email">
+					<textarea placeholder="Your Message"></textarea>
+					<input type="submit" value="Send">
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<div class="copyright">
+		<p>copyright @ 2020 LoveMe Foundation. All Right Reserved</p>
+	</div>
+
+	<script type="text/javascript">
+		window.addEventListener('scroll',function(){
+			var header = document.querySelector('header');
+			header.classList.toggle('sticky', window.scrollY > 0);
+		});
+
+		function toggleMenu(){
+			var menuToggle = document.querySelector('.toggle');
+			var menu = document.querySelector('.menu');
+			menuToggle.classList.toggle('active')
+			menu.classList.toggle('active')
+		}
+		function storeData(){
+			var name=document.getElementById('name').value;
+			var email=document.getElementById('email').value;
+			var text=document.getElementById('text').value;
+			localStorage.setItem("userName",name);
+			localStorage.setItem("userEmail",email);
+			localStorage.setItem("userText",text);
+			alert(name +' Your data has been stored in local storage ');
+
+		}
+	</script>
+	<footer>
+	</footer>
+</body>
+</html>
